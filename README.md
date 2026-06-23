@@ -1,4 +1,4 @@
-# Proyecto Backend: Primer Servidor con Express
+# Proyecto Backend Mi Primer Servidor con Express
 
 Este proyecto es el resultado de mi fase de contextualización en desarrollo backend. El objetivo fue construir un servidor desde cero para entender cómo funciona la comunicación entre un cliente y un servidor.
 
@@ -27,3 +27,15 @@ El código sigue una lógica lineal simple:
 2. Instala las dependencias: `npm install`.
 3. Inicia el servidor: `node index.js`.
 4. Accede a `http://localhost:3000` en el navegador.
+
+**Ruta raíz (/)**
+![Respuesta de la ruta raíz]
+![alt text](image.png)
+
+**Ruta /saludo**
+![Respuesta de la ruta saludo] 
+![alt text](image-1.png)
+
+**Ruta /usuarios**
+![Respuesta de la ruta usuarios] 
+![alt text](image-2.png)
