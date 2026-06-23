@@ -28,14 +28,16 @@ El código sigue una lógica lineal simple:
 3. Inicia el servidor: `node index.js`.
 4. Accede a `http://localhost:3000` en el navegador.
 
+## Imagenes de envidencia
+
 **Ruta raíz (/)**
 ![Respuesta de la ruta raíz]
-![alt text](image.png)
+![alt text](image-1.png)
 
 **Ruta /saludo**
 ![Respuesta de la ruta saludo] 
-![alt text](image-1.png)
+![alt text](image-2.png)
 
 **Ruta /usuarios**
 ![Respuesta de la ruta usuarios] 
-![alt text](image-2.png)
+![alt text](image-3.png)
