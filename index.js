@@ -2,25 +2,34 @@ const express = require('express');
 const app = express();
 const port = 8080;
 
-// Rutas
+// Ruta principal
 app.get("/", (req, res) => {
-  res.send("Mi primer servidor backend");
+  res.json({
+    mensaje: "Bienvenido al servidor de Santiago Orozco Gomez",
+    estado: "Servidor operativo"
+  });
 });
 
+// Ruta aprendiz
 app.get("/aprendiz", (req, res) => {
-  res.send("Santiago Orozco Gomez");
+  res.json({
+    nombre: "Santiago Orozco Gomez",
+    proyecto: "Mi primer servidor backend",
+    rol: "Desarrollador"
+  });
 });
 
+// Ruta programa
 app.get("/programa", (req, res) => {
   res.json({
     cantidad: 1, 
     datos: [
-      { id: 1, programa: "ADSO", ficha: "3315656" },
+      { id: 1, programa: "ADSO", ficha: "3315656" }
     ]
   });
 });
 
-// ESTA es la parte clave para que sea accesible en tu red local
+// Servidor escuchando
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Servidor escuchando en http://10.5.225.138:${port}`);
-})
+  console.log(`Servidor JSON escuchando en http://10.5.225.138:${port}`);
+});
