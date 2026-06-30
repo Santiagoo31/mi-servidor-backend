@@ -1,29 +1,26 @@
-// Importación del framework Express
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 8080;
 
-// Definición de las rutas aca está el ciclo de petición y respuesta
+// Rutas
 app.get("/", (req, res) => {
-  res.send("Mi servidor Santiago Orozco Gomez");
+  res.send("Mi primer servidor backend");
 });
 
-// Ruta /saludo Respuesta personalizada
-app.get("/saludo", (req, res) => {
-  res.send("Buenos dias amiguitos como están MUY BIEN esto es un saludo de amistad QUE BIEN");
+app.get("/aprendiz", (req, res) => {
+  res.send("Santiago Orozco Gomez");
 });
-// Ruta /usuarios Información de usuarios
-app.get("/usuarios", (req, res) => {
+
+app.get("/programa", (req, res) => {
   res.json({
-    cantidad: 2,
+    cantidad: 1, 
     datos: [
-      { id: 1, nombre: "Santiago Orozco", rol: "Desarrollador" },
-      { id: 2, nombre: "Stiven Meza", rol: "Administrador" },
-      { id: 2, nombre: "Kristian Range", rol: "Administrador" }
+      { id: 1, programa: "ADSO", ficha: "3315656" },
     ]
   });
 });
 
-app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
-});
+// ESTA es la parte clave para que sea accesible en tu red local
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Servidor escuchando en http://10.5.225.138:${port}`);
+})

@@ -1,43 +1,28 @@
-# Proyecto Backend Mi Primer Servidor con Express
+# Proyecto Backend: Mi Primer Servidor con Express
 
-Este proyecto es el resultado de mi fase de contextualización en desarrollo backend. El objetivo fue construir un servidor desde cero para entender cómo funciona la comunicación entre un cliente y un servidor.
+Este proyecto es el resultado de mi fase de contextualización en desarrollo backend. El objetivo fue construir un servidor desde cero para entender cómo funciona la comunicación entre un cliente y un servidor, trabajando con peticiones HTTP y formatos de datos JSON.
 
 ## ¿Qué aprendí?
-- **Entorno de ejecución:** Aprendí a usar Node.js para ejecutar JavaScript fuera del navegador.
-- **Gestión de dependencias:** Entendí cómo `package.json` y `npm` permiten administrar librerías externas como Express.
-- **Ciclo Petición-Respuesta:** Comprendí que el backend se basa en recibir una petición (`req`), procesarla y enviar una respuesta (`res`).
-- **Rutas (Endpoints):** Aprendí a estructurar una aplicación mediante diferentes rutas (`/`, `/saludo`, `/usuarios`).
+* **Entorno de ejecución:** Uso de Node.js para ejecutar JavaScript en el servidor.
+* **Gestión de dependencias:** Administración de paquetes con `package.json` y `npm`.
+* **Ciclo Petición-Respuesta:** Gestión del flujo entre el cliente (`req`) y el servidor (`res`).
+* **Rutas (Endpoints):** Estructuración de servicios mediante rutas específicas (`/`, `/aprendiz`, `/programa`).
 
-## Explicación del Código (index.js)
+## Explicación del Código (`index.js`)
 
-El código sigue una lógica lineal simple:
-
-1. **`const express = require('express');`**: Importamos la librería Express para facilitar la creación del servidor.
-2. **`const app = express();`**: Inicializamos la aplicación.
-3. **Definición de rutas (`app.get`):** - Define qué sucede cuando el cliente accede a una URL específica.
-   - Usamos `res.send()` para enviar texto o `res.json()` para enviar datos estructurados.
-4. **`app.listen(port, ...)`**: Es el comando final que mantiene el servidor "encendido" y escuchando las solicitudes en el puerto 3000.
-
-### Diferencia clave entre funciones
-- **`app.get()`**: Se usa para rutas específicas que responden cuando el usuario entra a una dirección método GET.
-- **`app.use()`**: Si se implementa sirve para ejecutar procesos globales o *middlewares* que corren antes de que cualquier ruta procese la petición.
+1. **Importación y Configuración:** Utilizamos Express para levantar el servidor en el puerto **8080**.
+2. **Rutas (Endpoints):**
+    * `/`: Página de bienvenida en texto plano.
+    * `/aprendiz`: Información personal.
+    * `/programa`: **Respuesta en formato JSON** con los datos de formación.
+3. **Configuración de red:** El servidor escucha en `0.0.0.0` para permitir conexiones desde otros dispositivos en la red local.
 
 ## Instrucciones para ejecutar
-1. Clona el repositorio.
-2. Instala las dependencias: `npm install`.
-3. Inicia el servidor: `node index.js`.
-4. Accede a `http://localhost:3000` en el navegador.
 
-## Imagenes de envidencia
-
-**Ruta raíz (/)**
-![Respuesta de la ruta raíz]
-![alt text](image-1.png)
-
-**Ruta /saludo**
-![Respuesta de la ruta saludo] 
-![alt text](image-2.png)
-
-**Ruta /usuarios**
-![Respuesta de la ruta usuarios] 
-![alt text](image-3.png)
+1. **Clonar el repositorio:** `git clone <https://github.com/Santiagoo31/mi-servidor-backend.git>`
+2. **Instalar dependencias:** `npm install`
+3. **Iniciar el servidor:** `npm start`
+4. **Acceder al servidor:**
+    * **Localmente:** `http://localhost:8080`
+    * **Desde la red local:** `http://10.5.225.138:8080`
+    * **Consultar datos en JSON:** `http://10.5.225.138:8080/programa`
